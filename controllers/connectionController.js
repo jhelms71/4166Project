@@ -6,8 +6,8 @@ exports.connections = (req, res) => {
     res.render('./connection/connections', {connections});
 };
 
-exports.new = (req, res) => {
-    res.render('./connection/new');
+exports.newConnection = (req, res) => {
+    res.render('./connection/newConnection');
 };
 
 exports.create = (req, res) => {

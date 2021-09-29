@@ -3,25 +3,25 @@ const controller = require('../controllers/connectionController');
 
 const router = express.Router();
 
-// GET /stories: send all stories to the user
+// GET /connections: send all stories to the user
 router.get('/', controller.connections);
 
-// GET /stories/new: send html form for creating a new story
-router.get('/new', controller.new);
+// GET /connections/new: send html form for creating a new story
+router.get('/newConnection', controller.newConnection);
 
-// POST /stories: create a new story
+// POST /connections: create a new story
 router.post('/', controller.create);
 
-// GET /stories/:id: send details of story identify by id
+// GET /connections/:id: send details of story identify by id
 router.get('/:id', controller.show)
 
-// GET /stories/:id/edit: send html form for editing exisiting story
+// GET /connections/:id/edit: send html form for editing exisiting story
 router.get('/:id/edit', controller.edit);
 
-// PUT /stories/:id: update the story identified by the id
+// PUT /connections/:id: update the story identified by the id
 router.put('/:id', controller.update);
 
-// DELETE /stories/:id: delete the story identified by id
+// DELETE /connections/:id: delete the story identified by id
 router.delete('/:id', controller.delete);
 
 module.exports = router;

@@ -4,26 +4,30 @@
             <h1>Sports</h1>
             <div class="sports">
                 <!-- Add foreach loop to get all the connections including separating topics-->
-                <h2>Basketball</h2>
-                <ul>
-                    <li><a href="connection.html">3 on 3 at Freedom Park</a></li>
-                    <li><a href="connection.html">Horse at UREC</a></li>
-                    <li><a href="connection.html">Reedy Creek Park - 8/29/2021 @ 10:30 A.M.</a></li>
-                </ul>
+                <% if (connections.length) { %>
+                    <% topics = [];%>
+                    <% connections.forEach(connection => {%>
+                        <% if(!topics.includes(connection.topic)) { %>
+                            <% topics.push(connection.topic); %>
+                        <% } %>
+                    <% }); %> 
 
-                <h2>Soccer</h2>
-                <ul>
-                    <li><a href="connection.html">Penalty Practice at Northeast Rec Field</a></li>
-                    <li><a href="connection.html">8 on 8 at Franklise Park</a></li>
-                    <li><a href="connection.html">11 on 11 at Kirk Farm Fields </a></li>
-                </ul>
-
-                <!-- <h2>Tennis</h2>
-                <ul>
-                    <li><a>Freedom Park - 8/29/2021 @ 10:30 A.M.</a></li>
-                    <li><a>Freedom Park - 8/29/2021 @ 10:30 A.M.</a></li>
-                    <li><a>Freedom Park - 8/29/2021 @ 10:30 A.M.</a></li>
-                </ul> -->
+                    <% topics.forEach(topic => { %>
+                        <h2><%= topic %></h2>
+                        <ul>
+                        <% connections.forEach(connection => { %>
+                            <% if(connection.topic === topic) {%>
+                                <li><a href="/connections/<%= connection.id %>"><%= connection.title %></a></li>
+                             <%} %>
+                        <% }); %>
+                        </ul>
+                        
+                    <% });%>
+                    
+                <% } else { %>
+                    <p>There are no connections.</p>
+                <% } %>
+                
             </div>
         </div>
     </div>

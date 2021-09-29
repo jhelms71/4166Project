@@ -27,11 +27,11 @@ app.get('/', (req, res) => {
 
 app.use('/connections', connectionRoutes);
 
-app.use((req, res, next) => {
-    let err = new Error('The server cannot locate ' + req.url);
-    err.status = 404;
-    next(err);
-});
+// app.use((req, res, next) => {
+//     let err = new Error('The server cannot locate ' + req.url);
+//     err.status = 404;
+//     next(err);
+// });
 
 app.use((err, req, res, next) => {
     console.log(err.stack);
