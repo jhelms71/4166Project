@@ -1,9 +1,9 @@
 const { nextTick } = require('process');
 const model = require('../models/connection');
 
-exports.index = (req, res) => {
+exports.connections = (req, res) => {
     let connections = model.find();
-    res.render('./connection/index', {connections});
+    res.render('./connection/connections', {connections});
 };
 
 exports.new = (req, res) => {

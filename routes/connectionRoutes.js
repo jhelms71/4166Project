@@ -4,7 +4,7 @@ const controller = require('../controllers/connectionController');
 const router = express.Router();
 
 // GET /stories: send all stories to the user
-router.get('/', controller.index);
+router.get('/', controller.connections);
 
 // GET /stories/new: send html form for creating a new story
 router.get('/new', controller.new);

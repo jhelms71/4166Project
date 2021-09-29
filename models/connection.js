@@ -70,13 +70,19 @@ const connections = [
     }
 ];
 
+// returns all the connections
 exports.find = () => connections;
 
+// reutnrs a specific connection by id
+exports.findById = id => connections.find(connection=> connection.id === id);
+
+// saves a new connection
 exports.save = function(connection) {
     connection.id = uuidv4();
     connections.push(connection);
 };
 
+// updates a connection by id
 exports.updateById = function(id, newConnection) {
     let connection = connections.find(connection=>connection.id === id);
     if(connection) {
@@ -88,6 +94,7 @@ exports.updateById = function(id, newConnection) {
     }
 };
 
+// deletes a connections by id
 exports.deleteById = function(id) {
     let index = connections.findIndex(connection => connection.id===id);
     if(index !== -1) {

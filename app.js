@@ -2,6 +2,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const connectionRoutes = require('./routes/connectionRoutes');
+const mainRoutes = require('./routes/mainRouter');
 const methodOverride = require('method-override');
 
 //create app
@@ -20,9 +21,28 @@ app.use(methodOverride('_method'));
 
 // set up routes
 app.get('/', (req, res) => {
+    console.log('In the index')
     res.render('index');
 });
 
+app.use('/connections', connectionRoutes);
+
+app.use((req, res, next) => {
+    let err = new Error('The server cannot locate ' + req.url);
+    err.status = 404;
+    next(err);
+});
+
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    if(!err.status){
+        err.status = 500;
+        err.message = ("Internal Server Error");
+    }
+
+    res.status(err.status);
+    res.render('error', {error: err});
+});
 
 // start server
 app.listen(port, host, () => {
