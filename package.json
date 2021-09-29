@@ -1,0 +1,27 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Project 2 MVC",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhelms71/4166Project.git"
+  },
+  "author": "Jonathan Helms",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhelms71/4166Project/issues"
+  },
+  "homepage": "https://github.com/jhelms71/4166Project#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "luxon": "^2.0.2",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "uuid": "^8.3.2"
+  }
+}
