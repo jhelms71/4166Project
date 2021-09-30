@@ -1,10 +1,35 @@
 <%- include('./partials/header.ejs') %>
     <div class="container">
         <div class="jumbotron">
-            <h1>Contact Page</h1>
-            <p>This is the contact page</p>
-            
-
+            <table>
+                <tr>
+                    <td>
+                        <h1>Contact Page</h1>
+                        <h3>Info</h3>
+                        <h5>Email: jhelms71@uncc.edu</h5>
+                        <h5>Phone: (123) 456-7890</h5>
+                    </td>
+                </tr>
+            </table>
+            <form>
+                <table>
+                    <tr>
+                        <td><label for="email" >Email</label></td>
+                        <td><input type="text" id="email" name="email" value = "" class = "fixed-width"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="subject" >Subject</label></td>
+                        <td><input type="text" id="subject" name="subject" value = "" class = "fixed-width"></td>
+                    </tr>
+                    <tr>
+                        <td class = "align-top"><label for="message">Message</label></td>
+                        <td><textarea rows="5" id="message" name="message" class = "fixed-width"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class = "align-right"><button>Submit</button></td>
+                    </tr>
+                </table> 
+            </form>
         </div>
     </div>
 <%- include('./partials/footer.ejs') %>
