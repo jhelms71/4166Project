@@ -4,10 +4,12 @@
             <div class="jumbotron">
                 <div class="topcon">
                     <h2>3 on 3 at Freedom Park</h1>
-                        <!-- <a href="connections.html">Update</a> -->
-                    <button type="submit" formmathod="GET" formaction="/connections/1/edit" class="btn btn-link">Update</button>
-                    <!-- <button type="submut" formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="btn btn-link"><a href="connections.html">Delete</a></button> -->
-                    
+                        <!-- <a href="connections.html">Update</a>
+                        <a href="connections.html">Delete</a> -->
+                    <form>
+                        <button type="submit" formmathod="GET" formaction="/connections/<%= connection.id %>/edit" class="btn btn-link">Update</button>
+                        <button type="submut" formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="btn btn-link">Delete</button>
+                    </form>
                 </div>
                 <div>
                     <table class="table">

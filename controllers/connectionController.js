@@ -34,7 +34,7 @@ exports.edit = (req, res, next) => {
     let id = req.params.id;
     let connection = model.findById(id);
     if(connection){
-        res.render('./connection/edit', {story});
+        res.render('./connection/edit', {connection});
     } else {
         let err = new Error('Cannot find a connection with id ' + id);
         err.status = 404;
@@ -58,7 +58,7 @@ exports.update = (req, res, next) => {
 exports.delete = (req, res, next) => {
     let id = req.params.id;
     if(model.deleteById(id)) {
-        res.redirect('/stories');
+        res.redirect('/connections');
     } else {
         let err = new Error('Cannot find a connection with id ' + id);
         err.status = 404;
