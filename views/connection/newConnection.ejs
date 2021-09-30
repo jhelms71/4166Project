@@ -3,61 +3,28 @@
         <div class="jumbotron">
             <form class="form" action='/connections' method='POST'>
 
-                <!-- Use table for now, but change CSS style later -->
-                <table>
-                    <tr class="form-group">
-                        <td><label for="host">Host</label></td>
-                        <td><input type="text" id="host" name="host" class = "fixed-width"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="title">Title</label></td>
-                        <td><input type="text" id="title" name="title" class = "fixed-width"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="topic">Topic</label></td>
-                        <td><input type="text" id="topic" name="topic" class = "fixed-width"></td>
-                    </tr>
-                    <tr>
-                        <td class = "align-top"><label for="details">Details</label></td>
-                        <td><textarea rows="5" id="details" name="details" class = "fixed-width"></textarea></td>
-                    </tr>
-                    <tr>
-                        <td><label for="date">Date</label></td>
-                        <td><input type="text" id="date" name="date" class = "fixed-width"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="startTime">Start Time</label></td>
-                        <td><input type="text" id="startTime" name="startTime" class = "fixed-width"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="endTime">End Time</label></td>
-                        <td><input type="text" id="endTime" name="endTime" class = "fixed-width"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class = "align-right"><button>Submit</button></td>
-                    </tr>
-                </table> 
+                <!-- change CSS style later -->
        
-                <!-- <div class="form-group">
+                <div class="form-group">
                     <label for="topic">Topic:</label>
-                    <input type="text" class="form-control" id="topic" placeholder="topic">
+                    <input type="text" class="form-control" id="topic" name="topic" placeholder="topic">
                 </div>
                 <div class="form-group">
                     <label for="title">Title:</label>
-                    <input type="text" class="form-control" id="title" placeholder="title">
+                    <input type="text" class="form-control" id="title" name="title" placeholder="title">
                 </div>
                 <div class="form-group">
                     <label for="host">Host:</label>
-                    <input type="text" class="form-control" id="host" placeholder="host">
+                    <input type="text" class="form-control" id="host" name="host" placeholder="host">
                 </div>
                 <div class="form-group">
                     <label for="details">Details:</label>
-                    <textarea class="form-control" id="details" placeholder="details"></textarea>
+                    <textarea class="form-control" id="details" name="details" placeholder="details"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="date">Date:</label>
                     <div class='input-group date' id='date'>
-                        <input type='text' class="form-control" id='date' placeholder="mm/dd/yyyy"/>
+                        <input type='text' class="form-control" id='date' name="date" placeholder="mm/dd/yyyy"/>
                         <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                         </span>
@@ -67,7 +34,7 @@
                 <div class="form-group">
                     <label for="startTime">Start:</label>
                     <div class='input-group time' id='startTime'>
-                        <input type='text' class="form-control" id='startTime' placeholder="12:00 AM"/>
+                        <input type='text' class="form-control" id='startTime' name="startTime" placeholder="12:00 AM"/>
                         <span class="input-group-addon">
                         <span class="glyphicon glyphicon-time"></span>
                         </span>
@@ -76,7 +43,7 @@
                 <div class="form-group">
                     <label for="endTime">End:</label>
                     <div class='input-group time' id='endTime'>
-                        <input type='text' class="form-control" id='endTime' placeholder="11:59 PM" />
+                        <input type='text' class="form-control" id='endTime' name="endTime" placeholder="11:59 PM" />
                         <span class="input-group-addon">
                         <span class="glyphicon glyphicon-time"></span>
                         </span>
@@ -85,13 +52,13 @@
                 <div class="form-group">
                     <label for="imageURL">Image URL:</label>
                     <div class="input-group image" id="imageURL">
-                        <input type="text" class="form-control" id="imageURL" placeholder="imageURL">
+                        <input type="text" class="form-control" id="imageURL" name="imageURL" placeholder="imageURL">
                         <span class="input-group-addon">
                         <span class="glyphicon glyphicon-folder-open"></span>
                         </span>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-success">Submit</button> -->
+                <button type="submit" class="btn btn-success">Submit</button>
             </form>
 
         </div>
