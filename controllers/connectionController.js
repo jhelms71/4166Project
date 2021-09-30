@@ -13,6 +13,7 @@ exports.newConnection = (req, res) => {
 exports.create = (req, res) => {
     // res.send('Created a new connection');
     let connection = req.body;
+    console.log(connection);
     model.save(connection);
     res.redirect('/connections');
 };
@@ -21,7 +22,7 @@ exports.show = (req, res, next) => {
     let id = req.params.id;
     let connection = model.findById(id);
     if(connection) {
-        res.render('./connection/show', {story});
+        res.render('./connection/connection', {connection});
     }  else {
         let err = new Error('Cannot find a connection with id ' + id);
         err.status = 404;

@@ -1,37 +1,38 @@
-<%- include('./partials/header.ejs') %>
+<%- include('../partials/header.ejs') %>
     <div>
         <div class="container">
             <div class="jumbotron">
                 <div class="topcon">
                     <h2>3 on 3 at Freedom Park</h1>
-                    <button type="button" class="btn btn-link"><a href="connections.html">Update</a></button>
-                    <button type="button" class="btn btn-link"><a href="connections.html">Delete</a></button>
+                        <!-- <a href="connections.html">Update</a> -->
+                    <button type="submit" formmathod="GET" formaction="/connections/1/edit" class="btn btn-link">Update</button>
+                    <!-- <button type="submut" formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="btn btn-link"><a href="connections.html">Delete</a></button> -->
                     
                 </div>
                 <div>
                     <table class="table">
                         <tr class="table-success">
-                            <td rowspan="5"><img src="basketball.png" alt="sports balls"></td>
-                            <td><p>Hosted by Jonathan Helms</p></td>
+                            <!-- Image needs to be fixed -->
+                            <td rowspan="5"><img src="" alt="sports balls"></td>
+                            <td><p>Hosted by <%= connection.host%></p></td>
                         </tr>
                         <tr>
-                            <td><p>Friday September 17, 2021</p></td>
+                            <td><p><%= connection.date %></p></td>
                         </tr>
                         <tr>
-                            <td><p>4:30 PM - 5:30 PM</p></td>
+                            <td><p><%= connection.startTime %> - <%= connection.endTime %></p></td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td><p>Freedom Park</p></td>
-                        </tr>
+                        </tr> -->
                     </table>
                 </div>
                 <div class="details">
                     <h3>Details</h3>
-                    <p>I have a couple friends that are going to play some basketball at Freedom Park, 
-                        so we're hoping to have a few more people to show up to play a few causal 3 on 3 games.</p>
+                    <p><%= connection.details %></p>
 
                 </div>
             </div>
         </div>
     </div>
-<%- include('./partials/footer.ejs') %>
+<%- include('../partials/footer.ejs') %>

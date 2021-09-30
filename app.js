@@ -2,7 +2,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const connectionRoutes = require('./routes/connectionRoutes');
-const mainRoutes = require('./routes/mainRouter');
+const mainRoutes = require('./routes/mainRoutes');
 const methodOverride = require('method-override');
 
 //create app
@@ -20,18 +20,23 @@ app.use(morgan('tiny'));
 app.use(methodOverride('_method'));
 
 // set up routes
-app.get('/', (req, res) => {
-    console.log('In the index')
-    res.render('index');
-});
+// app.get('/', (req, res) => {
+//     res.render('index');
+// });
+app.use('/', mainRoutes);
 
 app.use('/connections', connectionRoutes);
 
-// app.use((req, res, next) => {
-//     let err = new Error('The server cannot locate ' + req.url);
-//     err.status = 404;
-//     next(err);
+
+// app.get('/about', (req, res) => {
+//     res.render('about');
 // });
+
+app.use((req, res, next) => {
+    let err = new Error('The server cannot locate ' + req.url);
+    err.status = 404;
+    next(err);
+});
 
 app.use((err, req, res, next) => {
     console.log(err.stack);
