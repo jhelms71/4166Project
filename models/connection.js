@@ -11,7 +11,7 @@ const connections = [
         startTime: '4:30 PM',
         endTime: '5:30 PM',
         host: 'Jonathan Helms',
-        imageURL: 'image'
+        imageURL: 'image1'
     },
     {
         id: '2',
@@ -22,7 +22,7 @@ const connections = [
         startTime: '2:00 PM',
         endTime: '3:45 PM',
         host: 'Taylor James',
-        imageURL: 'image'
+        imageURL: 'image2'
     },
     {
         id: '3',
@@ -33,7 +33,7 @@ const connections = [
         startTime: '10:30 AM',
         endTime: '12:00 PM',
         host: 'Bob Smith',
-        imageURL: 'image'
+        imageURL: 'image3'
     },
     {
         id: '4',
@@ -44,7 +44,7 @@ const connections = [
         startTime: '4:30 PM',
         endTime: '5:30 PM',
         host: 'Jonathan Helms',
-        imageURL: 'image'
+        imageURL: 'image4'
     },
     {
         id: '5',
@@ -55,7 +55,7 @@ const connections = [
         startTime: '2:00 PM',
         endTime: '3:45 PM',
         host: 'Taylor James',
-        imageURL: 'image'
+        imageURL: 'image5'
     },
     {
         id: '6',
@@ -66,7 +66,7 @@ const connections = [
         startTime: '10:30 AM',
         endTime: '12:00 PM',
         host: 'Bob Smith',
-        imageURL: 'image'
+        imageURL: 'image6'
     }
 ];
 

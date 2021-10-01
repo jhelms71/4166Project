@@ -23,6 +23,7 @@ footer {
     justify-content: center;
     margin: 30px;
 }
+
 .footer_content li {
     margin: 0 40px;
 }
@@ -61,10 +62,6 @@ footer {
     text-decoration: none;
 }
 
-img {
-    height: 200px;
-}
-
 table {
     margin-top: 20px;
 }
@@ -77,6 +74,27 @@ form {
 .btn-success {
     background-color: black;
 }
+.btn-success:hover, button:hover {
+    background-color: peru;
+}
+
+.logo, .about {
+  display: inline;
+}
+
+.logo {
+  float: left;
+  height: 150px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+
+a, .btn {
+    color: white;
+    border: none;
+}
+
+
 
 /* attempting to place an image in the place of the title "Pickups" for branding 
 /* .navbar-brand img {

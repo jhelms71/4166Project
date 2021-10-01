@@ -12,23 +12,19 @@
                 </tr>
             </table>
             <form>
-                <table>
-                    <tr>
-                        <td><label for="email" >Email</label></td>
-                        <td><input type="text" id="email" name="email" value = "" class = "fixed-width"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="subject" >Subject</label></td>
-                        <td><input type="text" id="subject" name="subject" value = "" class = "fixed-width"></td>
-                    </tr>
-                    <tr>
-                        <td class = "align-top"><label for="message">Message</label></td>
-                        <td><textarea rows="5" id="message" name="message" class = "fixed-width"></textarea></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class = "align-right"><button>Submit</button></td>
-                    </tr>
-                </table> 
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" class="form-control" id="subject" name="subject">
+                </div>  
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea type="text" class="form-control" id="message" name="message"></textarea>
+                </div>  
+                <button type="submit" class="btn btn-success">Submit</button>  
             </form>
         </div>
     </div>
