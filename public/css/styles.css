@@ -25,7 +25,8 @@ footer {
 }
 
 .footer_content li {
-    margin: 0 40px;
+    /* margin: 0 40px; */
+    margin: 0 8%;
 }
 
 .sports li {
@@ -46,20 +47,9 @@ footer {
 }
 
 .topcon button {
-    background-color: black;
-    border-radius: 10px;
-    /* text-decoration: none; */
-}
-
-.topcon button:hover {
-    background-color: black;
-    /* text-emphasis: none; */
-    text-decoration: none;
-}
-
-.topcon a{
-    color: white;
-    text-decoration: none;
+    float: right;
+    margin: 10px;
+    padding: 10px;
 }
 
 table {
@@ -93,7 +83,6 @@ a, .btn {
     color: white;
     border: none;
 }
-
 
 
 /* attempting to place an image in the place of the title "Pickups" for branding 

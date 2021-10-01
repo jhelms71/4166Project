@@ -1,31 +1,39 @@
 <%- include('./partials/header.ejs') %>
     <div class="container">
         <div class="jumbotron">
-            <table>
-                <tr>
-                    <td>
-                        <h1>Contact Page</h1>
-                        <h3>Info</h3>
-                        <h5>Email: jhelms71@uncc.edu</h5>
-                        <h5>Phone: (123) 456-7890</h5>
-                    </td>
-                </tr>
-            </table>
-            <form>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="text" class="form-control" id="email" name="email">
+            <h1>Contact Page</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4">  
+                             
+                                <h3>Info</h3>
+                                <h5>Email: jhelms71@uncc.edu</h5>
+                                <h5>Phone: (123) 456-7890</h5>
+                                      
+                            </div>
+                            <div class="col-md-8">
+                                <form class="col-sm">
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="text" class="form-control" id="email" name="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subject">Subject:</label>
+                                        <input type="text" class="form-control" id="subject" name="subject">
+                                    </div>  
+                                    <div class="form-group">
+                                        <label for="message">Message:</label>
+                                        <textarea type="text" class="form-control" id="message" name="message"></textarea>
+                                    </div>  
+                                    <button type="submit" class="btn btn-success">Submit</button>  
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="subject">Subject:</label>
-                    <input type="text" class="form-control" id="subject" name="subject">
-                </div>  
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea type="text" class="form-control" id="message" name="message"></textarea>
-                </div>  
-                <button type="submit" class="btn btn-success">Submit</button>  
-            </form>
+            </div>
         </div>
     </div>
 <%- include('./partials/footer.ejs') %>

@@ -5,15 +5,16 @@
                 <div class="topcon">
                     <h2><%= connection.title %></h1>
                     <form>
+                        <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="btn btn-success">Delete</button>
                         <button type="submit" formmathod="GET" formaction="/connections/<%= connection.id %>/edit" class="btn btn-success">Update</button>
-                        <button type="submut" formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="btn btn-success">Delete</button>
                     </form>
                 </div>
                 <div>
                     <table class="table">
                         <tr class="table-success">
-                            <!-- Image needs to be fixed -->
-                            <td rowspan="5"><img src="<%= connection.imageURL %>" alt="<%= connection.imageURL %>"></td>
+                            
+                            <!-- <td rowspan="5"><img src="<%= connection.imageURL %>" alt="<%= connection.imageURL %>"></td> -->
+                            <td rowspan="5"><%= connection.imageURL %></td>
                             <td><p>Hosted by <%= connection.host%></p></td>
                         </tr>
                         <tr>
@@ -22,9 +23,7 @@
                         <tr>
                             <td><p><%= connection.startTime %> - <%= connection.endTime %></p></td>
                         </tr>
-                        <!-- <tr>
-                            <td><p>Freedom Park</p></td>
-                        </tr> -->
+                    
                     </table>
                 </div>
                 <div class="details">
