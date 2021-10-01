@@ -11,7 +11,8 @@ const connections = [
         startTime: '4:30 PM',
         endTime: '5:30 PM',
         host: 'Jonathan Helms',
-        imageURL: 'image1'
+        imageURL: 'image1',
+        location: 'Freedom Park'
     },
     {
         id: '2',
@@ -22,7 +23,8 @@ const connections = [
         startTime: '2:00 PM',
         endTime: '3:45 PM',
         host: 'Taylor James',
-        imageURL: 'image2'
+        imageURL: 'image2',
+        location: 'UREC'
     },
     {
         id: '3',
@@ -33,7 +35,8 @@ const connections = [
         startTime: '10:30 AM',
         endTime: '12:00 PM',
         host: 'Bob Smith',
-        imageURL: 'image3'
+        imageURL: 'image3',
+        location: 'Reedy Creek Park'
     },
     {
         id: '4',
@@ -44,7 +47,8 @@ const connections = [
         startTime: '4:30 PM',
         endTime: '5:30 PM',
         host: 'Jonathan Helms',
-        imageURL: 'image4'
+        imageURL: 'image4',
+        location: 'Northeast Rec Field'
     },
     {
         id: '5',
@@ -55,7 +59,8 @@ const connections = [
         startTime: '2:00 PM',
         endTime: '3:45 PM',
         host: 'Taylor James',
-        imageURL: 'image5'
+        imageURL: 'image5',
+        location: 'Franklise Park'
     },
     {
         id: '6',
@@ -66,7 +71,8 @@ const connections = [
         startTime: '10:30 AM',
         endTime: '12:00 PM',
         host: 'Bob Smith',
-        imageURL: 'image6'
+        imageURL: 'image6',
+        location: 'Kirk Farm Fields'
     }
 ];
 
@@ -88,6 +94,10 @@ exports.updateById = function(id, newConnection) {
     if(connection) {
         connection.title = newConnection.title;
         connection.details = newConnection.details;
+        connection.date = newConnection.date;
+        connection.startTime = newConnection.startTime;
+        connection.endTime = newConnection.endTime;
+        connection.location = newConnection.location;
         return true;
     } else {
         return false;
