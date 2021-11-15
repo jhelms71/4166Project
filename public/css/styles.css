@@ -92,3 +92,25 @@ a, .btn {
 .narbar-left {
     margin: auto;
 } */
+
+.success {
+    background: rgba(108, 192, 112, 0.7);
+    color: #ffff;
+    width: 70%;
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 20px;
+  }
+  
+  .error {
+    background: rgba(255, 102, 51, 0.7);
+    color: #ffff;
+    width: 70%;
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 20px;
+  }
+
+  .connection {
+      color: black;
+  }

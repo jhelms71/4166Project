@@ -9,11 +9,12 @@ const connectionSchema = new Schema({
     date: {type: String, required: [true, 'date is required']},
     startTime: {type: String, required: [true, 'starttime is required']},
     endTime: {type: String, required: [true, 'endTime is required']},
-    host: {type: String, required: [true, 'host is required']},
     imageURL: {type: String, required: [true, 'imageURL is required']},
-    location: {type: String, required: [true, 'location is required']}
+    location: {type: String, required: [true, 'location is required']},
+    author: {type: Schema.Types.ObjectId, ref: 'User'}
 },
 {timestamps: true}
 );
+
 //collection name is stories in the database
 module.exports = mongoose.model('Connection', connectionSchema);

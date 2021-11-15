@@ -14,12 +14,10 @@ exports.newConnection = (req, res) => {
 };
 
 exports.create = (req, res, next) => {
-    // res.send('Created a new connection');
-    let connection = new model(req.body);
-    // console.log(connection);
-    // model.save(connection);
-    // res.redirect('/connections');
-    connection.save()
+    let connection = new model(req.body);//create a new story document
+    connection.author = req.session.user;
+    console.log(connection.author.firstName);
+    connection.save()//insert the document to the database
     .then(connection=> res.redirect('/connections'))
     .catch(err=>{
         if(err.name === 'ValidationError' ) {
@@ -31,21 +29,13 @@ exports.create = (req, res, next) => {
 
 exports.show = (req, res, next) => {
     let id = req.params.id;
-    // let connection = model.findById(id);
-    // if(connection) {
-    //     res.render('./connection/connection', {connection});
-    // }  else {
-    //     let err = new Error('Cannot find a connection with id ' + id);
-    //     err.status = 404;
-    //     next(err);
-    // }
 
     if(!id.match(/^[0-9a-fA-F]{24}$/)) {
         let err = new Error('Invalid connection id');
         err.status = 400;
         return next(err);
     }
-    model.findById(id)
+    model.findById(id).populate('author', 'firstName lastName')
     .then(connection=>{
         if(connection) {
             return res.render('./connection/connection', {connection});
@@ -60,14 +50,6 @@ exports.show = (req, res, next) => {
 
 exports.edit = (req, res, next) => {
     let id = req.params.id;
-    // let connection = model.findById(id);
-    // if(connection){
-    //     res.render('./connection/edit', {connection});
-    // } else {
-    //     let err = new Error('Cannot find a connection with id ' + id);
-    //     err.status = 404;
-    //     next(err);
-    // }
 
     if(!id.match(/^[0-9a-fA-F]{24}$/)) {
         let err = new Error('Invalid connection id');
@@ -90,14 +72,6 @@ exports.edit = (req, res, next) => {
 exports.update = (req, res, next) => {
     let connection = req.body;
     let id = req.params.id;
-
-    // if (model.updateById(id, connection)) {
-    //     res.redirect('/connections/' + id);
-    // } else {
-    //     let err = new Error('Cannot find a connection with id ' + id);
-    //     err.status = 404;
-    //     next(err);
-    // }
 
     if(!id.match(/^[0-9a-fA-F]{24}$/)) {
         let err = new Error('Invalid connection id');
@@ -124,13 +98,6 @@ exports.update = (req, res, next) => {
 
 exports.delete = (req, res, next) => {
     let id = req.params.id;
-    // if(model.deleteById(id)) {
-    //     res.redirect('/connections');
-    // } else {
-    //     let err = new Error('Cannot find a connection with id ' + id);
-    //     err.status = 404;
-    //     next(err);
-    // }
 
     if(!id.match(/^[0-9a-fA-F]{24}$/)) {
         let err = new Error('Invalid connection id');
