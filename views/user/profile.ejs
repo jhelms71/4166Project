@@ -6,10 +6,14 @@
 
             <% if(connections.length){ %>
                 <p>You have created the following connections:</p>
-                <% connections.forEach(connection=>{ %>
-                    <a href='/connections/<%=connection.id %>' class="connection"><p ><%= connection.title %></p></a>
-                <%}); 
-            } else { %>
+                <div class="sports">
+                    <ul>
+                    <% connections.forEach(connection=>{ %>
+                        <li><a href='/connections/<%=connection.id %>' ><%= connection.title %></a></li>
+                    <%}); %>
+                    </ul>
+                </div>
+            <% } else { %>
                 <p>You have not created any connections</p>
             <%} %>
         </div>
