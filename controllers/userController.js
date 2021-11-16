@@ -40,6 +40,7 @@ exports.getUser = (req, res, next)=>{
             .then(result=>{
                 if(result){
                     req.session.user = user._id; //store user's id in the session
+                    req.session.userName = user.firstName + ' ' + user.lastName;
                     req.flash('success', 'You have successfully logged in');
                     res.redirect('/users/profile');
                 } else {

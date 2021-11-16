@@ -16,7 +16,9 @@
                     <table class="table">
                         <tr class="table-success">
                             <!-- <td rowspan="5"><img src="<%= connection.imageURL %>" alt="<%= connection.imageURL %>"></td> -->
-                            <td rowspan="5"><%= connection.imageURL %></td>
+                            <td rowspan="5">
+                                <img src="<%= connection.imageURL %>" alt="<%= connection.imageURL %>" class="connImg">
+                            </td>
                             <td><p>Hosted by <%= connection.author.firstName + ' ' + connection.author.lastName%></p></td>
                         </tr>
                         <tr>
