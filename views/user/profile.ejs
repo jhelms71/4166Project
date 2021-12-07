@@ -16,6 +16,20 @@
             <% } else { %>
                 <p>You have not created any connections</p>
             <%} %>
+
+            <% if(rsvps.length){ %>
+                <p>You have RSVP'd to the following connections:</p>
+                <div class="sports">
+                    <ul>
+                    <% rsvps.forEach(rsvp=>{ %>
+                        <li><a href='/connections/<%=rsvp.connection._id%>' ><%= rsvp.connection.title %> | <%= rsvp.rsvp%></a></li>
+                     
+                    <%}); %>
+                    </ul>
+                </div>
+            <% } else { %>
+                <p>You have not created any connections</p>
+            <%} %>
         </div>
     </div>
 <%- include('../partials/footer.ejs')%>

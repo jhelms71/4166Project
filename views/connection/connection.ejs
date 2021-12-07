@@ -9,7 +9,18 @@
                             <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>?_method=DELETE" class="btn btn-success">Delete</button>
                             <button type="submit" formmethod="GET" formaction="/connections/<%= connection.id %>/edit" class="btn btn-success">Update</button>
                         </form>
+                    <% } else if (user) { %>
+                        <form>  
+                            <h4 class='rsvpHeader'>Are you going to Attend? RSVP now!</h4>
+                            <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" name="rsvp" value="MAYBE" class="btn btn-success">Maybe</button>
+                            <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" name="rsvp" value="NO" class="btn btn-success">No</button>
+                            <button type="submit" formmethod="POST" formaction="/connections/<%= connection.id %>/rsvp" name="rsvp" value="YES" class="btn btn-success">Yes</button>
+
+                        </form>
                     <% } %>
+                        
+
+                    
                     
                 </div>
                 <div>
